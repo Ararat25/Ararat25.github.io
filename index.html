@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta name="description" content="Портфолио Арарата Ваняна — Go backend-разработчика. Проекты, достижения, опыт и контакты.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Арарат Ванян — Go backend-разработчик">
+  <meta property="og:description" content="Проекты на Go, gRPC и PostgreSQL. Опыт, достижения и контакты.">
+  <title>Арарат Ванян — Go backend-разработчик</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К основному содержанию</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Арарат Ванян, наверх"><span>AV</span><i>/</i></a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#projects">Проекты</a>
+      <a href="#achievements">Достижения</a>
+      <a href="#about">Обо мне</a>
+    </nav>
+    <a class="header-contact" href="#contact">Связаться <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> GO BACKEND <span class="eyebrow-sep">/</span> МОСКВА</p>
+        <h1 id="hero-title">Арарат<br><em>Ванян.</em></h1>
+        <p class="hero-role">Backend-разработчик на Go</p>
+        <p class="hero-intro">Разрабатываю серверные компоненты и API. В портфолио — проекты с Go, PostgreSQL и gRPC, а также опыт командной разработки и интеграций.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Смотреть проекты <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/Ararat25" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="Кратко о профиле">
+        <div class="note-top"><span>ПРОФИЛЬ / 01</span><span>2026</span></div>
+        <div class="flow-diagram" aria-hidden="true">
+          <div class="flow-node flow-client"><span>01</span><b>Запрос</b><small>HTTP / gRPC</small></div>
+          <div class="flow-line"><i></i></div>
+          <div class="flow-node flow-service"><span>02</span><b>Сервис</b><small>Go backend</small></div>
+          <div class="flow-line"><i></i></div>
+          <div class="flow-node flow-storage"><span>03</span><b>Данные</b><small>PostgreSQL</small></div>
+        </div>
+        <div class="note-bottom"><span>Фокус</span><strong>API · данные · интеграции</strong></div>
+      </aside>
+      <div class="hero-foot"><span>ПРОЕКТЫ И РЕЗУЛЬТАТЫ</span><span>01 — 05 <i>↓</i></span></div>
+    </section>
+
+    <section class="signal-band" aria-label="Основной стек">
+      <div class="signal-inner"><span class="signal-label">В РАБОТЕ</span><p>Go <b>·</b> PostgreSQL <b>·</b> REST <b>·</b> gRPC <b>·</b> Docker <b>·</b> Git</p></div>
+    </section>
+
+    <section class="section-wrap section-block" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / ВЫБРАННЫЕ РАБОТЫ</p><h2 id="projects-title">Проекты<span class="accent">.</span></h2></div>
+        <p class="section-aside">От прикладных HTTP-сервисов до обмена событиями по gRPC.</p>
+      </div>
+      <div id="project-list" class="project-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="achievement-section" id="achievements" aria-labelledby="achievements-title">
+      <div class="section-wrap section-block">
+        <div class="section-heading achievement-heading">
+          <div><p class="eyebrow">02 / ПРИЗНАНИЕ И ИССЛЕДОВАНИЯ</p><h2 id="achievements-title">Достижения<span class="accent">.</span></h2></div>
+          <p class="section-aside">Награды, исследовательские работы и дополнительное обучение.</p>
+        </div>
+        <div class="achievement-toolbar">
+          <div id="achievement-filters" class="filter-list" role="group" aria-label="Фильтр достижений"></div>
+          <span class="achievement-count" id="achievement-count" aria-live="polite"></span>
+        </div>
+        <div id="achievement-list" class="achievement-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block about-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">03 / ПРОФИЛЬ</p><h2 id="about-title">Обо мне<span class="accent">.</span></h2></div>
+        <p class="section-aside">Backend-разработка, системное мышление и работа в команде.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-statement"><p>Мне интересны сервисы, в которых важны понятные контракты, корректная работа с данными и предсказуемое поведение.</p><p>В работе использую Go, PostgreSQL, HTTP и gRPC. В командных проектах работал с SDK, интеграциями и code review.</p></div>
+        <div class="about-details">
+          <div class="detail-row"><span>СЕЙЧАС</span><strong>Go backend-разработка</strong></div>
+          <div class="detail-row"><span>ГОРОД</span><strong>Москва, Россия</strong></div>
+          <div class="detail-row"><span>ЯЗЫКИ</span><strong>Русский · Английский B1</strong></div>
+          <div class="detail-row"><span>ОБУЧЕНИЕ</span><strong>Программная инженерия · магистратура</strong></div>
+        </div>
+      </div>
+      <div class="education-row">
+        <div class="education-label"><p class="eyebrow">ОБРАЗОВАНИЕ</p><span>2026 — 2028</span></div>
+        <div><h3>Московский физико-технический институт</h3><p>Магистратура, физико-математическое направление, информатика и вычислительная техника</p></div>
+        <div class="education-label education-bachelor"><span>2020 — 2026</span></div>
+        <div><h3>Саратовский государственный технический университет им. Ю. А. Гагарина</h3><p>Бакалавриат, программная инженерия</p></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-wrap contact-inner">
+        <div><p class="eyebrow">04 / КОНТАКТ</p><h2 id="contact-title">Обсудим<br><em>задачу?</em></h2></div>
+        <div class="contact-links">
+          <a class="contact-primary" href="mailto:Ararat2506@yandex.ru">Ararat2506@yandex.ru <span aria-hidden="true">↗</span></a>
+          <a href="https://t.me/araratvanyan" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Ararat25" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <p>Открыт к предложениям о работе и профессиональному общению.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer section-wrap"><a class="wordmark footer-mark" href="#top"><span>AV</span><i>/</i></a><span>Арарат Ванян · Go backend</span><a href="https://github.com/Ararat25" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

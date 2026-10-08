@@ -1,0 +1,47 @@
+[
+  {
+    "title":"Сервис управления подписками",
+    "kind":"Go · HTTP API",
+    "description":"Сервис ведёт подписки пользователей и считает их суммарную стоимость за выбранный период с фильтрами по пользователю и названию сервиса.",
+    "role":"Реализация Go API и связки сервисной логики с PostgreSQL.",
+    "stack":["Go","Chi","PostgreSQL","pgx","SQL migrations","Swagger"],
+    "url":"https://github.com/Ararat25/subscription-aggregation-service",
+    "featured":true
+  },
+  {
+    "title":"gRPC Pub/Sub",
+    "kind":"Go · gRPC · Streaming",
+    "description":"Небольшой сервис принимает события и передаёт их подписчикам через gRPC server streaming. Внутри используется собственная in-memory шина событий.",
+    "role":"Разработка gRPC API и компонента Publisher–Subscriber.",
+    "stack":["Go","gRPC","Protocol Buffers","Channels","Mutex"],
+    "url":"https://github.com/Ararat25/grpc-pubsub",
+    "featured":true
+  },
+  {
+    "title":"Marketplace Service",
+    "kind":"Go · Backend",
+    "description":"Backend объявлений с пользовательскими сценариями регистрации и авторизации, созданием записей и выдачей списка с фильтрацией и пагинацией.",
+    "role":"Разработка HTTP-обработчиков и работы с PostgreSQL.",
+    "stack":["Go","Chi","PostgreSQL","GORM","Docker Compose"],
+    "url":"https://github.com/Ararat25/marketplace-service",
+    "featured":false
+  },
+  {
+    "title":"Интеллектуальная система поддержки решений",
+    "kind":"Go · Python · ML",
+    "description":"Модуль оценивает риск осложнений язвы желудка на основе моделей Random Forest и Decision Trees и интегрирован в программный комплекс поддержки принятия решений.",
+    "role":"Разработка аналитического модуля и его программная интеграция.",
+    "stack":["Go","Python","scikit-learn","SQLite"],
+    "url":"",
+    "featured":false
+  },
+  {
+    "title":"Автоматизация цикла разработки в GitHub",
+    "kind":"Python · Integrations",
+    "description":"Агентный workflow обрабатывает GitHub Issue, создаёт изменения и Pull Request, а затем проходит цикл AI-review и доработок.",
+    "role":"Разработка Code Agent, Reviewer Agent и повторного цикла ревью.",
+    "stack":["Python","FastAPI","GitHub API","Docker","GitHub Actions"],
+    "url":"https://github.com/Ararat25/coding-agents",
+    "featured":false
+  }
+]

@@ -55,10 +55,16 @@ function renderAchievements() {
     achievementRoot.innerHTML = '<p class="load-error">В этой категории пока нет записей.</p>';
     return;
   }
-  achievementRoot.innerHTML = visible.map((item) => `<article class="achievement-item">
+  achievementRoot.innerHTML = visible.map((item) => {
+    const url = typeof item.url === "string" ? item.url.trim() : "";
+    const title = url
+      ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(item.title)}<span class="link-arrow" aria-hidden="true">↗</span></a>`
+      : escapeHTML(item.title);
+    return `<article class="achievement-item ${url ? "has-link" : ""}">
     <span class="achievement-year">${escapeHTML(item.year)}</span>
-    <div><span class="achievement-category">${escapeHTML(item.categoryLabel)}</span><h3>${escapeHTML(item.title)}</h3>${item.detail ? `<p>${escapeHTML(item.detail)}</p>` : ""}</div>
-  </article>`).join("");
+    <div><span class="achievement-category">${escapeHTML(item.categoryLabel)}</span><h3>${title}</h3>${item.detail ? `<p>${escapeHTML(item.detail)}</p>` : ""}</div>
+  </article>`;
+  }).join("");
 }
 
 async function loadPortfolio() {

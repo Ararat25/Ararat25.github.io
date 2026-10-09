@@ -1,47 +1,65 @@
 [
   {
-    "title":"Сервис управления подписками",
-    "kind":"Go · HTTP API",
-    "description":"Сервис ведёт подписки пользователей и считает их суммарную стоимость за выбранный период с фильтрами по пользователю и названию сервиса.",
-    "role":"Реализация Go API и связки сервисной логики с PostgreSQL.",
-    "stack":["Go","Chi","PostgreSQL","pgx","SQL migrations","Swagger"],
+    "title":"Subscription Aggregation Service",
+    "kind":"Go · REST API",
+    "description":"Сервис учёта подписок и расчёта расходов: REST API для создания, изменения, удаления и получения подписок, а также расчёт суммарной стоимости за период с фильтрацией по пользователю и названию сервиса.",
+    "role":"Разработка REST API, схемы PostgreSQL и SQL-миграций с индексами, Swagger-документация и запуск через Docker Compose.",
+    "stack":["Go","Chi","PostgreSQL","pgx","SQL","Swagger","Docker Compose"],
     "url":"https://github.com/Ararat25/subscription-aggregation-service",
     "featured":true
   },
   {
+    "title":"Auth Service",
+    "kind":"Go · JWT · Сессии",
+    "description":"Сервис аутентификации и управления сессиями: выдача и обновление access/refresh-токенов, ротация refresh-токенов и завершение пользовательских сессий.",
+    "role":"Проверка JWT-подписи и срока действия токенов, сверка refresh-токена с активной сессией в PostgreSQL, проверка User-Agent и webhook-уведомление при смене IP.",
+    "stack":["Go","Chi","PostgreSQL","GORM","JWT","Docker Compose","Swagger"],
+    "url":"https://github.com/Ararat25/auth-service",
+    "featured":false
+  },
+  {
     "title":"gRPC Pub/Sub",
     "kind":"Go · gRPC · Streaming",
-    "description":"Небольшой сервис принимает события и передаёт их подписчикам через gRPC server streaming. Внутри используется собственная in-memory шина событий.",
-    "role":"Разработка gRPC API и компонента Publisher–Subscriber.",
-    "stack":["Go","gRPC","Protocol Buffers","Channels","Mutex"],
+    "description":"Сервис публикации и потоковой доставки событий: публикация событий и серверная потоковая подписка по темам поверх in-memory механизма Pub/Sub.",
+    "role":"Разработка gRPC API на Protocol Buffers, доставка через каналы Go, управление жизненным циклом подписок, логирование interceptor и тесты порядка доставки.",
+    "stack":["Go","gRPC","Protocol Buffers","goroutines","channels","sync"],
     "url":"https://github.com/Ararat25/grpc-pubsub",
     "featured":true
   },
   {
-    "title":"Marketplace Service",
-    "kind":"Go · Backend",
-    "description":"Backend объявлений с пользовательскими сценариями регистрации и авторизации, созданием записей и выдачей списка с фильтрацией и пагинацией.",
-    "role":"Разработка HTTP-обработчиков и работы с PostgreSQL.",
-    "stack":["Go","Chi","PostgreSQL","GORM","Docker Compose"],
-    "url":"https://github.com/Ararat25/marketplace-service",
-    "featured":false
-  },
-  {
-    "title":"Интеллектуальная система поддержки решений",
+    "title":"DIAGN PRO",
     "kind":"Go · Python · ML",
-    "description":"Модуль оценивает риск осложнений язвы желудка на основе моделей Random Forest и Decision Trees и интегрирован в программный комплекс поддержки принятия решений.",
-    "role":"Разработка аналитического модуля и его программная интеграция.",
-    "stack":["Go","Python","scikit-learn","SQLite"],
+    "description":"Система сбора и обработки данных пациентов для оценки риска осложнений язвы желудка: модуль классификации на Random Forest и Decision Tree при выраженном дисбалансе классов. Получено свидетельство о государственной регистрации программы.",
+    "role":"Разработка модуля классификации и интеграция ML-компонента в программный комплекс поддержки принятия решений.",
+    "stack":["Go","Python","scikit-learn","Pandas","NumPy","C#","SQLite"],
     "url":"",
     "featured":false
   },
   {
-    "title":"Автоматизация цикла разработки в GitHub",
-    "kind":"Python · Integrations",
-    "description":"Агентный workflow обрабатывает GitHub Issue, создаёт изменения и Pull Request, а затем проходит цикл AI-review и доработок.",
-    "role":"Разработка Code Agent, Reviewer Agent и повторного цикла ревью.",
-    "stack":["Python","FastAPI","GitHub API","Docker","GitHub Actions"],
+    "title":"doctors-assistant",
+    "kind":"Go · AI · REST API",
+    "description":"Медицинский AI-помощник: backend обрабатывает запросы с описанием симптомов и передаёт контекст в GigaChat для получения предварительных вариантов заболеваний.",
+    "role":"Разработка backend на Go с интеграцией GigaChat, HTTP-маршрутизацией и доступом к SQL Server через GORM.",
+    "stack":["Go","Chi","GORM","SQL Server","GigaChat API","JWT"],
+    "url":"https://github.com/Ararat25/doctors-assistant",
+    "featured":false
+  },
+  {
+    "title":"Coding Agents",
+    "kind":"Python · AI · CI/CD",
+    "description":"AI-агенты автоматизируют разработку ПО: Code Agent анализирует GitHub Issue и готовит изменения, Reviewer Agent проверяет diff в Pull Request, а оркестратор связывает их в цикл доработки с ограничением итераций.",
+    "role":"Разработка Code Agent, Reviewer Agent и оркестратора, интеграция с GitHub API и запуск через CLI, REST API и webhook.",
+    "stack":["Python","FastAPI","Pydantic","GitHub API","GitPython","LLM API","Docker","GitHub Actions"],
     "url":"https://github.com/Ararat25/coding-agents",
+    "featured":false
+  },
+  {
+    "title":"Система мониторинга территорий по снимкам БПЛА",
+    "kind":"Python · Computer Vision",
+    "description":"Система компьютерного зрения для обнаружения пожаров и несанкционированных свалок на аэрофотоснимках: модель YOLO11n обучена на размеченном датасете.",
+    "role":"Обучение модели YOLO11n и подбор гиперпараметров; время инференса 204 мс на кадр в проведённых измерениях.",
+    "stack":["Python","YOLO11n"],
+    "url":"",
     "featured":false
   }
 ]
